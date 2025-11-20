@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.inner-country1 {
+    display: flex;
+        width: 50%;
+    gap: 6px;
+}
+
+/* Each box default */
+.inner-country1 .box {
+    flex: 1;
+    padding: 0;
+    border: 1px solid rgb(255 255 255 / .1);
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+}
+
+/* Overlay effect */
+.inner-country1 .box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #fff0 40%, rgba(31, 30, 31, 0.9) 85%);
+    z-index: 5;
+}
+
+/* Images */
+.inner-country1 .box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+/* Address wrapper */
+.inner-country1 .box .address {
+    position: absolute;
+    inset: 0;
+    padding: 20px;
+    z-index: 10;
+    transition: .5s;
+}
+
+/* Title default (rotated + bottom aligned) */
+.inner-country1 .box .address h4 {
+color: #fff;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 44px;
+    left: 1px;
+    transition: .5s;
+    text-align: center;
+    width: 100%;
+        font-family: system-ui;
+}
+
+/* Paragraph default hidden */
+.inner-country1 .box .address p {
+    font-size: .9rem;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+    position: absolute;
+    bottom: 20px;
+}
+
+/* -------------------------- */
+/* HOVER EFFECT               */
+/* -------------------------- */
+
+/* on hover → box expands */
+.inner-country1 .box:hover {
+    flex: 1 1 50%;
+}
+
+/* Title rotates back to normal */
+.inner-country1 .box:hover .address h4 {
+    transform: none;
+    bottom: 85px;
+    left: 22px;
+    position: absolute;
+    width: 100%;
+    text-align: left;
+}
+
+/* Paragraph becomes visible */
+.inner-country1 .box:hover .address p {
+    opacity: 1;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+    <div class="inner-country1">
+        <div class="box">
+            <img src="https://cdn.kodytechnolab.com/wp-content/uploads/2023/03/india1.webp" alt="INDIA">
+            <div class="address">
+                <h4>INDIA (HO)</h4>
+                <p>2nd floor, J block, Mondeal Retail park, Besides Iscon mall, Iscon cross-road, SG Highway, Ahmedabad,
+                    Gujarat 380015</p>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="https://cdn.kodytechnolab.com/wp-content/uploads/2025/10/gift-city.webp" alt="INDIA">
+            <div class="address">
+                <h4>INDIA (BO)</h4>
+                <p>Unit G-01, Brigade International Financial Center, Building 14A, Block 14, Zone-1, GIFT City, Ratanpur,
+                    Gandhinagar, Gujarat – 382355</p>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="https://cdn.kodytechnolab.com/wp-content/uploads/2023/03/canada1.webp" alt="CANADA">
+            <div class="address">
+                <h4>CANADA</h4>
+                <p>60 Capulet Ln, London, ON N6H OB2, Canada</p>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="https://cdn.kodytechnolab.com/wp-content/uploads/2023/03/usa1.webp" alt="USA">
+            <div class="address">
+                <h4>USA</h4>
+                <p>Datamac Analytics LLC, One Financial Plaza, FL 1000, Fort Lauderdale FL, 33394</p>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="https://cdn.kodytechnolab.com/wp-content/uploads/2023/03/uk1.webp" alt="UK">
+            <div class="address">
+                <h4>UK</h4>
+                <p>14 East Bay Lane, The Press Centre, Here East, Queen Elizabeth Olympic Park, London, E20 3BS</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
